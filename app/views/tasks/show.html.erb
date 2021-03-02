@@ -1,8 +1,8 @@
 <h1><%= @task.title %></h1>
 <p><%= @task.details %></p>
  <form action="">
-    <input type="checkbox" <%= @task.completed ? 'checked' : '' %>>
-    <span>This task is <%= @task.completed ? ' completed.' : ' not completed yet.' %></span>
+    <span class="dot <%= @task.completed ? 'done' : '' %>"></span>
+    <p>This task is <%= @task.completed ? ' completed.' : ' not completed yet.' %></p>
   </form>
 
 <%= link_to 'Edit', edit_task_url(@task.id) %>
